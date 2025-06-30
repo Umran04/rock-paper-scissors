@@ -1,1 +1,1 @@
-# rock-paper-scissors
+My take on the rock paper scissors game project
