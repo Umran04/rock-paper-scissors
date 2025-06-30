@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
     
@@ -13,24 +16,24 @@
         <h1>Rock Paper Scissors</h1>
         
         <div class="scores">
-            <div class="player-score" id="player-score"> hard code </div>
+            <div class="player-score" id="player-score"> </div>
             <div class="CPU-score" id="CPU-score"> </div>
         </div>
 
         <div class="choices">
             
-            <button class="human-choice"> Rock </button>
-            <button class="human-choice"> Paper </button>
-            <button class="human-choice"> Scissors </button>
+            <button class="human-choice-rock" id="human-choice-rock"> </button>
+            <button class="human-choice-paper" id="human-choice-paper">  </button>
+            <button class="human-choice-scissors" id="human-choice-scissors"> </button>
 
         </div>
 
         <div class="results">
-            <h5 class="output">(output)</h5>
-            <h5 class="computer-choice">computer chooses : </h5>
+            <h5 class="output" id="output"></h5>
+            <h5 class="computer-choice" id="computer-choice"> </h5>
         </div>
 
-        <button>Play again</button>
+        <button class="PA-btn" id="PA-btn">Play again</button>
     </div>
 
     
