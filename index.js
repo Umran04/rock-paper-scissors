@@ -1,5 +1,6 @@
 let playerScore = 0;
 let cpuScore = 0;
+let finalScore =0;
 let cpuChoices = ['Rock','Paper','Scissors']
 let output = ['You win', 'CPU wins', "It's a tie"]
 let playerSelect = null; 
@@ -52,6 +53,11 @@ function cpuWins(){
         document.getElementById("output").innerText = "CPU wins"
         cpuScore++;
         if (playerScore === 5 || cpuScore === 5){
+            if(playerScore > cpuScore){
+                document.getElementById("output").innerText = "Game Over: Player wins, Click Play Again";
+            }else if (cpuScore > playerScore){
+                document.getElementById("output").innerText = "Game Over: CPU wins, Click Play Again";
+            }else{}
             btnDisable();
         }
         document.getElementById("CPU-score").innerText = "CPU : " + cpuScore;
@@ -61,6 +67,11 @@ function playerWins(){
     document.getElementById("output").innerText = "You win, you chose " + playerSelect
         playerScore++;
         if (playerScore === 5 || cpuScore === 5){
+            if(playerScore > cpuScore){
+                document.getElementById("output").innerText = "Game Over: Player wins, Click Play Again";
+            }else if (cpuScore > playerScore){
+                document.getElementById("output").innerText = "Game Over: CPU wins, Click Play Again";
+            }else{}
             btnDisable();
         }
         document.getElementById("player-score").innerText = "Player : " + playerScore;
