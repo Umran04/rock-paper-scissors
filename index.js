@@ -1,6 +1,6 @@
 let playerScore = 0;
 let cpuScore = 0;
-let cpuChoice = ['rock','paper','scissors']
+let cpuChoices = ['Rock','Paper','Scissors']
 let output = ['You win', 'CPU wins', "It's a tie"]
 let playerSelect = null; 
 
@@ -10,27 +10,32 @@ let btnScissors = document.getElementById("human-choice-scissors");
 
 document.getElementById("player-score").innerText = "Player : " + playerScore;
 document.getElementById("CPU-score").innerText = "CPU : " + cpuScore;
-document.getElementById("output").innerText = output[0]
-document.getElementById("computer-choice").innerText = "CPU choses " + getCPUchoice();
+document.getElementById("computer-choice").innerText = "CPU wating for you to select"
+document.getElementById("output").innerText = "No winner yet"
+
 
 
 btnRock.addEventListener('click', () => {
     playerSelect = 'Rock'
-    console.log('Rock')
+    document.getElementById("computer-choice").innerText = "CPU choses " + getCPUchoice();
+    
 })
 
 btnPaper.addEventListener('click', () => {
     playerSelect = 'Paper'
-    console.log('Paper')
+    document.getElementById("computer-choice").innerText = "CPU choses " + getCPUchoice();
+    
 })
 
 btnScissors.addEventListener('click', () => {
     playerSelect = 'Scissors'
-    console.log('Scissors')
+    document.getElementById("computer-choice").innerText = "CPU choses " + getCPUchoice();
+    
 })
 
 
 function getCPUchoice(){
-    let randIndex = Math.floor(Math.random()*cpuChoice.length)
-    return cpuChoice[randIndex]
+    let randIndex = Math.floor(Math.random() * cpuChoices.length)
+    return cpuChoices[randIndex]
 }
+
