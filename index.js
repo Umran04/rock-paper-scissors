@@ -54,7 +54,7 @@ function cpuWins(){
         cpuScore++;
         if (playerScore === 5 || cpuScore === 5){
             if(playerScore > cpuScore){
-                document.getElementById("output").innerText = "Game Over: Player wins, Click Play Again";
+                document.getElementById("output").innerText = "Game Over: You win, Click Play Again";
             }else if (cpuScore > playerScore){
                 document.getElementById("output").innerText = "Game Over: CPU wins, Click Play Again";
             }else{}
@@ -68,7 +68,7 @@ function playerWins(){
         playerScore++;
         if (playerScore === 5 || cpuScore === 5){
             if(playerScore > cpuScore){
-                document.getElementById("output").innerText = "Game Over: Player wins, Click Play Again";
+                document.getElementById("output").innerText = "Game Over: You win, Click Play Again";
             }else if (cpuScore > playerScore){
                 document.getElementById("output").innerText = "Game Over: CPU wins, Click Play Again";
             }else{}
