@@ -48,63 +48,45 @@ function getCPUchoice(){
     return cpuChoices[randIndex]
 }
 
+function cpuWins(){
+        document.getElementById("output").innerText = "CPU wins"
+        cpuScore++;
+        if (playerScore === 5 || cpuScore === 5){
+            btnDisable();
+        }
+        document.getElementById("CPU-score").innerText = "CPU : " + cpuScore;
+}
+
+function playerWins(){
+    document.getElementById("output").innerText = "You win, you chose " + playerSelect
+        playerScore++;
+        if (playerScore === 5 || cpuScore === 5){
+            btnDisable();
+        }
+        document.getElementById("player-score").innerText = "Player : " + playerScore;
+}
+
+function btnDisable(){
+    btnPaper.disabled = true;
+    btnScissors.disabled = true;
+    btnRock.disabled = true;
+}
+
 function getWinner(){
     if (playerSelect === cpuSelect){
         document.getElementById("output").innerText = "It's a tie"
     }else if (playerSelect === 'Rock' && cpuSelect === 'Paper'){
-        document.getElementById("output").innerText = "CPU wins"
-        cpuScore++;
-        if (playerScore === 5 || cpuScore === 5){
-            btnPaper.disabled = true;
-            btnScissors.disabled = true;
-            btnRock.disabled = true;
-        }
-        document.getElementById("CPU-score").innerText = "CPU : " + cpuScore;
+        cpuWins();
     }else if (playerSelect === 'Paper' && cpuSelect === 'Rock'){
-        document.getElementById("output").innerText = "You win, you chose " + playerSelect
-        playerScore++;
-        if (playerScore === 5 || cpuScore === 5){
-            btnPaper.disabled = true;
-            btnScissors.disabled = true;
-            btnRock.disabled = true;
-        }
-        document.getElementById("player-score").innerText = "Player : " + playerScore;
+        playerWins();
     }else if (playerSelect === 'Paper' && cpuSelect === 'Scissors'){
-        document.getElementById("output").innerText = "CPU wins"
-        cpuScore++;
-        if (playerScore === 5 || cpuScore === 5){
-            btnPaper.disabled = true;
-            btnScissors.disabled = true;
-            btnRock.disabled = true;
-        }
-        document.getElementById("CPU-score").innerText = "CPU : " + cpuScore;
+       cpuWins();
     }else if (playerSelect === 'Scissors' && cpuSelect === 'Paper'){
-        document.getElementById("output").innerText = "You win, you chose " + playerSelect
-        playerScore++;
-        if (playerScore === 5 || cpuScore === 5){
-            btnPaper.disabled = true;
-            btnScissors.disabled = true;
-            btnRock.disabled = true;
-        }
-        document.getElementById("player-score").innerText = "Player : " + playerScore;
+        playerWins();
     }else if (playerSelect === 'Scissors' && cpuSelect === 'Rock'){
-        document.getElementById("output").innerText = "CPU wins"
-        cpuScore++;
-        if (playerScore === 5 || cpuScore === 5){
-            btnPaper.disabled = true;
-            btnScissors.disabled = true;
-            btnRock.disabled = true;
-        }
-        document.getElementById("CPU-score").innerText = "CPU : " + cpuScore;
+        cpuWins();
     }else if (playerSelect === 'Rock' && cpuSelect === 'Scissors'){
-        document.getElementById("output").innerText = "You win, you chose " + playerSelect
-        playerScore++;
-        if (playerScore === 5 || cpuScore === 5){
-            btnPaper.disabled = true;
-            btnScissors.disabled = true;
-            btnRock.disabled = true;
-        }
-        document.getElementById("player-score").innerText = "Player : " + playerScore;
+        playerWins();
     }else{}
 }
 
