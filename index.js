@@ -5,16 +5,21 @@ let cpuChoices = ['Rock','Paper','Scissors']
 let output = ['You win', 'CPU wins', "It's a tie"]
 let playerSelect = null; 
 let cpuSelect = null;
+let playerRoundScore = 0;
+let cpuRoundScore = 0;
 
 let btnRock = document.getElementById("human-choice-rock");
 let btnPaper = document.getElementById("human-choice-paper");
 let btnScissors = document.getElementById("human-choice-scissors");
 let btnPlayAgain = document.getElementById("PA-btn"); 
 
+document.getElementById("player-round-scores").innerText = "Player Total : " + playerRoundScore;
+document.getElementById("cpu-round-scores").innerText = "CPU Total : " + cpuRoundScore;
 document.getElementById("player-score").innerText = "Player : " + playerScore;
 document.getElementById("CPU-score").innerText = "CPU : " + cpuScore;
 document.getElementById("computer-choice").innerText = "CPU wating for you to select"
 document.getElementById("output").innerText = "No winner yet"
+
 
 
 
@@ -55,8 +60,12 @@ function cpuWins(){
         if (playerScore === 5 || cpuScore === 5){
             if(playerScore > cpuScore){
                 document.getElementById("output").innerText = "Game Over: You win, Click Play Again";
+                playerRoundScore++
+                document.getElementById("player-round-scores").innerText = "Player Total : " + playerRoundScore;
             }else if (cpuScore > playerScore){
                 document.getElementById("output").innerText = "Game Over: CPU wins, Click Play Again";
+                cpuRoundScore++
+                document.getElementById("cpu-round-scores").innerText = "CPU Total : " + cpuRoundScore;
             }else{}
             btnDisable();
         }
@@ -69,8 +78,12 @@ function playerWins(){
         if (playerScore === 5 || cpuScore === 5){
             if(playerScore > cpuScore){
                 document.getElementById("output").innerText = "Game Over: You win, Click Play Again";
+                playerRoundScore++
+                document.getElementById("player-round-scores").innerText = "Player Total : " + playerRoundScore;
             }else if (cpuScore > playerScore){
                 document.getElementById("output").innerText = "Game Over: CPU wins, Click Play Again";
+                cpuRoundScore++
+                document.getElementById("cpu-round-scores").innerText = "CPU Total : " + cpuRoundScore;
             }else{}
             btnDisable();
         }

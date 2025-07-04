@@ -18,26 +18,26 @@ h1{
     color: royalblue;
 }
 
-.scores{
+.scores, .round-scores{
     display: flex;
     gap: 100px;
     margin: 50px 0px;
 
 }
 
-.player-score, .CPU-score{
+.player-score, .CPU-score, .player-round-scores, .cpu-round-scores{
     border: 0.5px solid royalblue;
-    width: 100px;
+    width: 125px;
     height: 20px;
     border-radius: 2px;
     padding: 10px 15px;
 }
 
-.player-score{
+.player-score, .player-round-scores{
     color: limegreen;
 }
 
-.CPU-score{
+.CPU-score, .cpu-round-scores{
     color: red;
 }
 
